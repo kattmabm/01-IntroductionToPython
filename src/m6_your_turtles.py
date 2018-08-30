@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 ###############################################################################
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -30,8 +30,16 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 
 import rosegraphics as rg
 
+window = rg.TurtleWindow()
+
 loopy_turtle_boi = rg.SimpleTurtle('turtle')
 loopy_turtle_boi.pen = rg.Pen('neon green', 5)
 loopy_turtle_boi.speed = 5
 
 radius = 400
+
+for i in range(10):
+    loopy_turtle_boi.draw_circle(radius)
+    radius = radius - 25
+
+window.close_on_mouse_click()
